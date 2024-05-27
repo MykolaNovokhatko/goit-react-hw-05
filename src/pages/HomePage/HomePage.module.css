@@ -1,0 +1,26 @@
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+.container {
+  max-width: 1440px;
+  min-height: 1000px;
+  padding: 8px;
+  margin: auto;
+  background: linear-gradient(to bottom, #343434, #000000);
+  box-shadow: 0 0 10px 0 rgba(129, 2, 2, 0.5);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  filter:drop-shadow(10px 7px 10px orange);
+  font-style: italic;
+  font-size: 42px;
+  margin-bottom: 36px;
+}

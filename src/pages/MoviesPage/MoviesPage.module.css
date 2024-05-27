@@ -1,0 +1,47 @@
+.container {
+  max-width: 1440px;
+  min-height: 1000px;
+  padding: 8px;
+  margin: auto;
+  background: linear-gradient(to bottom, #343434, #000000);
+  box-shadow: 0 0 10px 0 rgba(129, 2, 2, 0.5);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(10px 7px 10px orange);
+  font-style: italic;
+  font-size: 42px;
+  margin-bottom: 36px;
+}
+
+.formStyle {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 36px
+}
+
+.inputStyle {
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 2px;
+  color: white;
+  padding: 5px;
+}
+
+.btnSearch {
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgb(54, 54, 54);
+    border-radius: 2px;
+}
+
+.btnSearch:hover {
+    box-shadow: 2px 2px 5px orange;
+    transform: scale(1.01);
+}

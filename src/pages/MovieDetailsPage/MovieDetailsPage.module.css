@@ -1,0 +1,31 @@
+.container {
+    max-width: 1440px;
+    min-height: 1000px;
+    padding: 8px;
+    margin: auto;
+    background: linear-gradient(to bottom, #343434, #000000);
+    box-shadow: 0 0 10px 0 rgba(129, 2, 2, 0.5);
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(10px 7px 10px orange);
+    font-style: italic;
+    font-size: 42px;
+    margin-bottom: 36px;
+  }
+
+  .btnDetails {
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgb(54, 54, 54);
+    border-radius: 2px;
+}
+
+.btnDetails:hover {
+    box-shadow: 2px 2px 5px orange;
+    transform: scale(1.01);
+}

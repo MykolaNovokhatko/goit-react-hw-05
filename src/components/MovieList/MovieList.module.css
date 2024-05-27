@@ -1,0 +1,29 @@
+.listMovie {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: space-around;
+}
+
+.itemMovie {
+    box-shadow: 10px 7px 20px orange;
+    border: 1px solid rgb(123, 33, 0) ;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemMovie:hover {
+    transform: scale(1.04);
+}
+
+.linkMovie {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    width: 160px;
+    
+    margin-bottom: 8px;
+    text-align: center;
+}
