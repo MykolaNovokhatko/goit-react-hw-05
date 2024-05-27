@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieList from '/src/components/MovieList/MovieList';
 
@@ -10,7 +10,7 @@ const HomePage = () => {
       try {
         const response = await axios.get('https://api.themoviedb.org/3/trending/movie/day', {
           headers: {
-            Authorization: 'b5ba9fd32045f40847af1db0f90b3706',
+            Authorization: 'Bearer b5ba9fd32045f40847af1db0f90b3706eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNWJhOWZkMzIwNDVmNDA4NDdhZjFkYjBmOTBiMzcwNiIsInN1YiI6IjY2NTMyZTIzOWU1ZTFhMjhlNGM2MzFiOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1vuZ6E7VvQZie1MYaKOKJwVqh9fKIhy1Wk739Fe7cyU',
           },
         });
         setMovies(response.data.results);
