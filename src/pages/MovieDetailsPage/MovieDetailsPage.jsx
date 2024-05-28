@@ -10,7 +10,7 @@ import {
 import axios from 'axios';
 import MovieCast from '/src/components/MovieCast/MovieCast';
 import MovieReviews from '/src/components/MovieReviews/MovieReviews';
-import css from './MovieDetailsPage.module.css'
+import css from './MovieDetailsPage.module.css';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -56,22 +56,46 @@ const MovieDetailsPage = () => {
   if (!movie) {
     return <div>Loading...</div>;
   }
+
   const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  const countries = movie.production_countries.map(country => country.name).join(', ');
+
   return (
     <div className={css.container}>
-      <button className={css.btnDetails} onClick={handleGoBack}>Go back</button>
+      <button className={css.btnDetails} onClick={handleGoBack}>
+        Go back
+      </button>
       <h1 className={css.title}>{movie.title}</h1>
-      <img
-            src={imageUrl}
-            alt={`${movie.title} poster`}
-          />
-      <p>{movie.overview}</p>
-      <Link to="cast">Cast</Link>
-      <Link to="reviews">Reviews</Link>
-      <Routes>
-        <Route path="cast" element={<MovieCast />} />
-        <Route path="reviews" element={<MovieReviews />} />
-      </Routes>
+      <div className={css.infoMoviePosition}>
+        <img
+          className={css.imgDetails}
+          src={imageUrl}
+          alt={`${movie.title} poster`}
+          width="260"
+        />
+        <div>
+          <h2 className={css.overview}>Overview</h2>
+          <p className={css.infoMovie}>{movie.overview}</p>
+          <p className={css.overview}><strong>Rating:</strong> {movie.vote_average}</p>
+          <p className={css.overview}><strong>Country:</strong> {countries}</p>
+        </div>
+      </div>
+      <div className={css.infoRoutes}>
+        <div className={css.btnLink}>
+          <Link className={css.linkDetails} to="cast">
+            Cast
+          </Link>
+          <Link className={css.linkDetails} to="reviews">
+            Reviews
+          </Link>
+        </div>
+        <div className={css.routesContainer}>
+          <Routes>
+            <Route path="cast" element={<MovieCast />} />
+            <Route path="reviews" element={<MovieReviews />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 };

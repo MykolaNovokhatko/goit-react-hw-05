@@ -24,4 +24,5 @@
 .linkStyle:hover {
     border-color: #000000;
     box-shadow: 2px 2px 10px orange;
+    transform: scale(1.01);
 }

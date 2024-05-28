@@ -1,31 +1,103 @@
 .container {
-    max-width: 1440px;
-    min-height: 1000px;
-    padding: 8px;
-    margin: auto;
-    background: linear-gradient(to bottom, #343434, #000000);
-    box-shadow: 0 0 10px 0 rgba(129, 2, 2, 0.5);
-  }
-  
-  .title {
-    display: flex;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    filter: drop-shadow(10px 7px 10px orange);
-    font-style: italic;
-    font-size: 42px;
-    margin-bottom: 36px;
-  }
+  max-width: 1440px;
+  min-height: 1000px;
+  padding: 8px;
+  margin: auto;
+  background: linear-gradient(to bottom, #343434, #000000);
+  box-shadow: 0 0 10px 0 rgba(129, 2, 2, 0.5);
+}
 
-  .btnDetails {
-    background-color: transparent;
-    color: white;
-    font-size: 16px;
-    border: 1px solid rgb(54, 54, 54);
-    border-radius: 2px;
+.title {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(10px 7px 10px orange);
+  font-style: italic;
+  font-size: 42px;
+  margin-bottom: 36px;
+}
+
+.btnDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  border: 1px solid rgb(54, 54, 54);
+  border-radius: 2px;
+  margin-top: 16px;
+  margin-left: 28px;
+  box-shadow: 2px 2px 5px orange;
 }
 
 .btnDetails:hover {
-    box-shadow: 2px 2px 5px orange;
-    transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.infoMoviePosition {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  align-items: start;
+  margin: auto;
+  border-left: 1px solid orange;
+  border-bottom: 1px solid orange;
+  padding: 0 0 2px 2px;
+  margin-bottom: 20px;
+}
+
+.infoMovie {
+  display: flex;
+  color: white;
+  font-size: 20px;
+}
+
+.imgDetails {
+  display: flex;
+  align-items: start;
+}
+
+.infoRoutes {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.overview {
+  color: white;
+  font-size: 20px;
+}
+
+.btnLink {
+  display: flex;
+  gap: 24px;
+  margin: auto;
+}
+
+.linkDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  box-shadow: 10px 7px 10px orange;
+  border-radius: 2px;
+  text-decoration: none;
+  width: 160px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.linkDetails:hover {
+  transform: scale(1.01);
+}
+
+.routesContainer {
+  border-right: 1px solid orange;
+  border-top: 1px solid orange;
+  padding: 8px;
+  color: rgb(255, 255, 255);
 }
