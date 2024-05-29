@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   Link,
   Route,
@@ -18,6 +18,7 @@ const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
+  const prevLocationRef = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -42,11 +43,7 @@ const MovieDetailsPage = () => {
   }, [movieId]);
 
   const handleGoBack = () => {
-    if (location.state?.from) {
-      navigate(location.state.from);
-    } else {
-      navigate('/movies');
-    }
+    navigate(prevLocationRef.current);
   };
 
   if (error) {
