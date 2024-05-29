@@ -10,10 +10,8 @@ const MovieList = ({ movies }) => {
         <li className={css.itemMovie} key={movie.id}>
           <Link
             className={css.linkMovie}
-            to={{
-              pathname: `/movies/${movie.id}`,
-              state: { from: location },
-            }}
+            to={`/movies/${movie.id}`}
+            state={{ from: location }}
           >
             <img
               src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`}
